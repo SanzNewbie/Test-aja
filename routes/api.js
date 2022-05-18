@@ -1,11 +1,12 @@
 __path = process.cwd()
 let express = require('express');
-let creator = "Zynfx"
+let creator = "zynfx"
 let axios = require('axios')
 let fs = require('fs')
 let fetch = require('node-fetch');
 let router = express.Router();
 let hxz = require('hxz-api')
+let api = require("caliph-api")
 let zrapi = require('zrapi')
 let scrapper = require('../lib/scraper/scraper')
 let Searchnabi = require('../lib/scraper/kisahnabi')
@@ -110,7 +111,7 @@ loghandler = {
 	error: {
 		status: 404,
 		creator: `${creator}`,
-		message: 'An internal error occurred. Please report via WhatsApp wa.me/6288286421519'
+		message: 'An internal error occurred. Please report via WhatsApp wa.me/6281314050985'
 	}
 }
 
@@ -450,6 +451,17 @@ router.get('/textpro/bokeh', async (req, res, next) => {
     next()
   }
 })
+router.get('/textpro/summer', async (req, res, next) => {
+  if(!req.query.text) return res.status(400).json(logHandler('text'))
+  try {
+    let tp = await zrapi.textpro('https://textpro.me/create-a-summer-neon-light-text-effect-online-1076.html', [req.query.text]), tpBuff = await getBuffer(tp)
+    res.status(200).type('jpeg').send(tpBuff)
+  } catch {
+    res.status(500).json(loghandler.error)
+    next()
+  }
+})
+
 router.get('/textpro/icecold', async (req, res, next) => {
   if(!req.query.text) return res.status(400).json(logHandler('text'))
   try {
@@ -663,6 +675,34 @@ router.get('/goredl', async (req, res) => {
 		res.json(loghandler.error)
 	}
 })
+
+router.get('/nsfw/glasses', async (req, res, next) => {
+	        let waifyy = (await axios.get(`https://raw.githubusercontent.com/inirey/result-rest-api/main/nsfw/glasses.json`)).data
+	        let result = waifyy[Math.floor(Math.random() * (waifyy.length))]
+	        let data = await getBuffer(result)
+            await fs.writeFileSync(__path +'/media/yuri.png', data)
+            await res.sendFile(__path +'/media/yuri.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/media/yuri.png')
+        })
+router.get('/nsfw/foot', async (req, res, next) => {
+	        let waifyy = (await axios.get(`https://raw.githubusercontent.com/inirey/result-rest-api/main/nsfw/foot.json`)).data
+	        let result = waifyy[Math.floor(Math.random() * (waifyy.length))]
+	        let data = await getBuffer(result)
+            await fs.writeFileSync(__path +'/media/yuri.png', data)
+            await res.sendFile(__path +'/media/yuri.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/media/yuri.png')
+        })
+router.get('/nsfw/ass', async (req, res, next) => {
+	        let waifyy = (await axios.get(`https://raw.githubusercontent.com/inirey/result-rest-api/main/nsfw/ass.json`)).data
+	        let result = waifyy[Math.floor(Math.random() * (waifyy.length))]
+	        let data = await getBuffer(result)
+            await fs.writeFileSync(__path +'/media/yuri.png', data)
+            await res.sendFile(__path +'/media/yuri.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/media/yuri.png')
+        })
 router.get('/nsfw/ahegao', async (req, res, next) => {
 	        let waifyy = (await axios.get(`https://raw.githubusercontent.com/Handokodwi/result-rest-api/main/nsfw/ahegao.json`)).data
 	        let result = waifyy[Math.floor(Math.random() * (waifyy.length))]
@@ -776,6 +816,16 @@ router.get('/nsfw/masturbation', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/media/yuri.png')
         })
+router.get('/nsfw/gangbang', async (req, res, next) => {
+	        let waifyy = (await axios.get(`https://raw.githubusercontent.com/inirey/result-rest-api/main/nsfw/gangbang.json`)).data
+	        let result = waifyy[Math.floor(Math.random() * (waifyy.length))]
+	        let data = await getBuffer(result)
+            await fs.writeFileSync(__path +'/media/yuri.png', data)
+            await res.sendFile(__path +'/media/yuri.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/media/yuri.png')
+        })
+
 // Searching
 router.get('/pinterest', async (req, res) => {
 	let query = req.query.query
@@ -1425,7 +1475,25 @@ router.get('/hitungmundur', async (req, res) => {
         res.json({ status : false, creator : `Zynfx`, message : "Eror, Harap Report Ke Owner"})
     }
 })
+router.get('/freefire', async (req, res, next) => {
+            ID = req.query.ID
+            
+    if (!ID) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter id"})
 
+       api.search.freefireid(ID)
+        .then(data => {
+        var result = data;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result,
+                 message : `jangan lupa follow ${creator}`
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 router.get('/getapikey', async(req, res) => {
   sender = req.query.sender
   if(!sender) return res.json(misparam('sender'))
