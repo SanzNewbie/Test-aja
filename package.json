@@ -1,5 +1,5 @@
 {
-  "name": "api-velgrynd",
+  "name": "Api Gwehj",
   "version": "1.1.0",
   "description": "My Rest Api",
   "main": "nodemon index.js",
@@ -30,6 +30,7 @@
     "cors": "^2.8.5",
     "discord-canvas": "^1.4.1",
     "dotenv": "^8.2.0",
+    "caliph-api": "^0.8.4",
     "express": "^4.17.1",
     "fake-useragent": "^1.0.1",
     "file-type": "^16.5.0",
