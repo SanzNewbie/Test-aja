@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="FREE REST API">
+    <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
+    <meta name="author" content="zynfx-restapi">
+    <title>Zynfx - API</title>
+    <meta property="og:site_name" name="og:site_name" content="Zynfx APIs">
+    <meta property="og:title" name="og:title" content="Zynfx - APIs">
+    <meta property="og:url" name="og:url" content="https://zynfx.herokuapp.com/">
+    <meta property="og:image" name="og:image" content="https://telegra.ph/file/01bd7a7df0dda06f1a8c0.jpg">
+    <meta property="og:description" name="og:description" content="Free Rest Api For You">
+    <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="https://telegra.ph/file/01bd7a7df0dda06f1a8c0.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+    <iframe src="../audio/audio.mp3" hidden="hidden" allow="autoplay" ; encrypt-media></iframe>
+  </head>
+  <body>
+    <body id="page-top" onload="getvisitor();">
+      <div class="container-scroller">
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"></div>
+          <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-profile dropdown">
+                <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                  <div class="nav-profile-img">
+                    <img src="https://telegra.ph/file/01bd7a7df0dda06f1a8c0.jpg" alt="image">
+                    <span class="availability-status online"></span>
+                  </div>
+                  <div class="nav-profile-text">
+                    <p class="mb-1 text-black">Zynfx Apis</p>
+                  </div>
+                </a>
+                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="/about">
+                    <i class="mdi mdi-creation menu-icon"></i> About </a>
+                </div>
+              </li>
+              <li class="nav-item d-none d-lg-block full-screen-link">
+                <a class="nav-link">
+                  <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="mdi mdi-bell-outline"></i>
+                  <span class="count-symbol bg-danger"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Notifications</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-success">
+                        <i class="mdi mdi-calendar"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                      <h6 class="preview-subject font-weight-normal mb-1">Welcome To Zynfx API</h6>
+                    </div>
+                  </a>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-menu"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+          <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+              <li class="nav-item nav-profile">
+                <a class="nav-link">
+                  <div class="nav-profile-image">
+                    <img src="https://telegra.ph/file/01bd7a7df0dda06f1a8c0.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                  </div>
+                  <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">Zynfx-restapi</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  <span class="menu-title">Dashboard</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-sosmed" aria-expanded="false" aria-controls="ui-sosmed">
+              <span class="menu-title">Social Media API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-laptop menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-sosmed">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/tiktok?url=https://vt.tiktok.com/ZSe8Xfwd1">Tiktok Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/tikmate?url=https://vt.tiktok.com/ZSe8Xfwd1">Tiktokv2 Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/tiktokder?url=https://vt.tiktok.com/ZSe8Xfwd1">Tiktokv3 Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/dddtik?url=https://vt.tiktok.com/ZSe8Xfwd1">Tiktokv4 Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/snapinsta?url=https://www.instagram.com/p/CTMnneTl8YJ/?utm_medium=copy_link">Instagramv1 Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/igdl?url=https://www.instagram.com/p/CTMnneTl8YJ/?utm_medium=copy_link">Instagramv2 Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/youtube?url=https://youtu.be/5C8yvJUVB-0">Youtube Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/twitter?url=https://twitter.com/PassengersMovie/status/821025484150423557">Twitter Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/pindl?url=https://id.pinterest.com/pin/361906520063070744">Pinterest Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/mediafire?url=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file">MediaFire Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/soundcloud?url=https://soundcloud.com/ahmeeka/happier-than-ever-x-traitor">Soundcloud Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/goredl?url=https://seegore.com/there-is-no-free-pleasure-with-transvestite-prostitutes/">Seegore Download</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/rexdldown?url=https://rexdl.com/android/yowhatsapp-plus-mod-apk.html">Rexdl Download</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+                   <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-nsfwsfw" aria-expanded="false" aria-controls="ui-nsfwsfw">
+              <span class="menu-title">Nsfw & Sfw API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-paw menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-nsfwsfw">
+              <ul class="nav flex-column sub-menu">
+             <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/yuri">Nsfw Yuri</a></li>
+             <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/femdom">Nsfw Femdom</a></li>
+              <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/cum">Nsfw Cum</a></li>
+               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/masturbation">Nsfw Masturbation</a></li>
+               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/blowjob">Nsfw Blowjob</a></li>
+               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/hentai">Nsfw Hentai</a></li>
+               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/bdsm">Nsfw Bdsm</a></li>
+               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/ero">Nsfw Ero</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/ahegao">Nsfw Ahegao</a></li>
+                 <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/tentacles">Nsfw Tentacles</a></li>
+                  <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/pussy">Nsfw Pussy</a></li>
+                   <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/nsfw/manga">Nsfw Manga</a></li>
+                    </ul>
+                   </div>
+                            </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-animanga" aria-expanded="false" aria-controls="ui-animanga">
+              <span class="menu-title">Anime & Manga API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-cat menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-animanga">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/konachan?query=hatsune miku">Konachan Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/zerochan?query=hatsune miku">Zerochan Search</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-fun" aria-expanded="false" aria-controls="ui-fun">
+              <span class="menu-title">Fun Api</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-gamepad menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-fun">
+              <ul class="nav flex-column sub-menu">
+                     <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakkalimat">Tebak kalimat</a></li>
+                      <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakkata">Tebak kata</a></li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakjenaka">Tebak jenaka</a></li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakkimia">Tebak kimia</a></li>
+                         <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebaklirik">Tebak lirik</a></li>
+                          <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakchara">Tebak karakter</a></li>
+                           <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebaktebakan">Tebak tebakan</a></li>
+                            <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/tebakbendera">Tebak bendera</a></li>
+             </ul>
+          </li>
+                     <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-islam" aria-expanded="false" aria-controls="ui-islam">
+              <span class="menu-title">Islam API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-islam menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-islam">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/muslim/surah?no=1">Surah</a>
+                      </li>
+                       <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/muslim/hadits?kitab=bukhari&nomor=52">Hadits</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/muslim/quran?surah=1&ayat=2">Quran</a>
+                      </li>
+                        <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/muslim/asmaulhusna">Asmaul husna</a>
+                        <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/muslim/kisahnabi?nabi=muhammad">Kisah Nabi</a>
+                      </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-textpro" aria-expanded="false" aria-controls="ui-textpro">
+              <span class="menu-title">Textpro API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-textbox menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-textpro">
+              <ul class="nav flex-column sub-menu">
+                 <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/brokenglass?text=Zynfx">Broken Glass</a></li>
+                  </li>
+                 <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/dropwater?text=Zynfx">Drop Water</a></li>
+                  </li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/horrorblood?text=Zynfx">Horror Blood</a></li>   
+                    </li>
+                      <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/sketch?text=Zynfx">Sketch</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/lightglow?text=Zynfx">Light Glow</a></li>
+                      </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/graffiti?text=Zynfx">Graffiti</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/magmahot?text=Zynfx">Magma Hot</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/transformer?text=Zynfx">Transformer</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/darkgold?text=Zynfx">Dark Gold</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/thunder?text=Zynfx">Thunder</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/neondevil?text=Zynfx">Neon Devil</a></li>
+                      </li>
+                       <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/steel?text=Zynfx">Steel</a></li>
+                       </li>
+                         <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/whitebear?text=Zynfx">White Bear</a></li>
+                        </li>
+                          <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/impressive?text=Zynfx">Impressive</a></li>
+                      </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/1917?text=Zynfx">1917</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/greenhoror?text=Zynfx">Green Horor</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/3dstone?text=Zynfx">3D Stone</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/captainamerica?text=Zynfx">Captain America</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/toxic?text=Zynfx">Toxic</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/icecold?text=Zynfx">Ice Cold</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/bokeh?text=Zynfx">Bokeh</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/wood?text=Zynfx">Wood</a></li>
+                         </li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/textpro/pornhub?text1=kontol&text2=Zynfx">Pornhub</a></li>
+                    </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+               <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-search" aria-expanded="false" aria-controls="ui-search">
+              <span class="menu-title">Searching API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-book-search menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-search">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/google?query=kapan+indonesia+merdeka">Google Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/pinterest?query=itsuki+nakano">Pinterest Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/gore?query=arm">Seegore Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/apkmody?query=free fire">Apkmody Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/android1?query=free fire">Android1 Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/happymod?query=free fire">Happymod Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/rexdl?query=free fire">Rexdl Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/Chord?query=lathi">Chord Search</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-image" aria-expanded="false" aria-controls="ui-image">
+              <span class="menu-title">Random API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-image menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-image">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/waifu">Ramdom Waifu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/neko">Random Neko</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/husbu">Random Husbu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/loli">Random Loli</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/milf">Random Milf</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/random/cosplay">Random Cosplay</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/randomgore">Random Gore</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/randomtiktok?username=graciajessicajane">Random Video Tiktok</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/ceritahantu">Cerita Horror</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-canvas" aria-expanded="false" aria-controls="ui-canvas">
+              <span class="menu-title">Canvas API</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-eye menu-icon"></i>
+            </a>
+                  
+            <div class="collapse" id="ui-canvas">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/welcome?username=asu&memcount=10&groupname=anu&ppurl=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg&bgurl=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Welcome Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/goodbye?username=asu&memcount=10&groupname=anu&ppurl=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg&bgurl=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Goodbye Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/wasted?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Wasted Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/wanted?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Wanted Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/rip?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">RIP Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/sepia?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Sepia Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/shit?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Shit Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/greyscale?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Greyscale Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/beautiful?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Beautiful Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/blur?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Blur Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/invert?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Invert Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/jokeOverHead?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Jokeoverhead Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/hitler?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Hitler Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/facepalm?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Facepalm Image</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="api/circle?url=https://images3.alphacoders.com/117/thumb-1920-1174531.jpg">Circle Image</a>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-vokal" aria-expanded="false" aria-controls="ui-vokal">
+              <span class="menu-title">Others</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-font-awesome menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-vokal">
+              <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/jadwaltv?channel=antv">JadwalTv</a>
+                      <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/npmstalk?query=hx">Npm Stalker</a></li>
+                        <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/stalkff?userId=1738056711">Stalk FF</a></li>       
+                               <li class="nav-item"> <a class="nav-link" target="_blank" href="/api/hitungmundur?tanggal=2&bulan=4">Hitung Mundur [ Waktu ]</a></li>                                   
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/emoji?emoji=🦊">Emoji</a>
+                       <li class="nav-item">
+                       </li>
+                     <li class="nav-item">
+                      <a class="nav-link" target="_blank" href="/api/tokohindo">Tokoh Indo</a>
+                       <li class="nav-item">
+                    </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item sidebar-actions">
+                <span class="nav-link">
+                  <div class="border-bottom">
+                    <h6 class="font-weight-normal mb-3">Made With Zynfx</h6>
+                  </div>
+                  <div class="mt-4">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-whatsapp"></i>
+                    </span>
+                    <a class="menu-title" href="https://wa.me/6281314050985">WhatsApp</a>
+                  </div>
+                  <div class="mt-4">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-instagram"></i>
+                    </span>
+                    <a class="menu-title" href="https://instagram.com/_.zynfx">Instagram</a>
+                  </div>
+                  <div class="mt-4">
+                    <span class="menu-icon">
+                      <i class="mdi mdi-github-circle"></i>
+                    </span>
+                    <a class="menu-title" href="https://github.com/VallXc">GitHub</a>
+                  </div>
+                </span>
+              </li>
+            </ul>
+          </nav>
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <div class="page-header">
+                <h3 class="page-title">
+                  <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                    <i class="mdi mdi-home"></i>
+                  </span> Dashboard
+                </h3>
+                <nav aria-label="breadcrumb">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page"></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="row">
+                <div class="col-md-4 stretch-card grid-margin">
+                  <div class="card ngentod-merah card-img-holder text-white">
+                    <div class="card-body">
+                      <h4 class="font-weight-normal mb-3">IP Address <i class="mdi mdi-access-point-network mdi-24px float-right"></i>
+                      </h4>
+                      <h2 class="mb-5" id="ip">Waiting...</h2>
+                      <h6 class="card-text">Your IP Address</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 stretch-card grid-margin">
+                  <div class="card ngentod-biru card-img-holder text-white">
+                    <div class="card-body">
+                      <h4 class="font-weight-normal mb-3">Visitor <i class="mdi mdi-eye mdi-24px float-right"></i>
+                      </h4>
+                      <h2 class="mb-5" id="visitor">Waiting...</h2>
+                      <h6 class="card-text">Visitor This Web</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 stretch-card grid-margin">
+                  <div class="card ngentod-ungu card-img-holder text-white">
+                    <div class="card-body">
+                      <h4 class="font-weight-normal mb-3">Date <i class="mdi mdi-calendar mdi-24px float-right"></i>
+                      </h4>
+                      <h2 class="mb-5" id="datetime">Waiting...</h2>
+                      <h6 class="card-text">Date Now</h6>
+                    </div>
+                  </div>
+                </div>
+                <footer class="footer">
+                  <div class="container-fluid clearfix">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Zynfx Apis 2022</span>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+            <script>
+      Swal.fire({
+                icon: 'warning',
+                title: 'igfo ngab',
+                text: 'jangan spam om biar gak gampang down mhweee',
+                showCloseButton: false,
+                focusConfirm: true,
+                confirmButtonText:
+                '<ion-icon name="checkmark-circle" class="font-18" id="sideact"></ion-icon> Ok!',
+                confirmButtonAriaLabel: 'Checkmark Circle, Close!',
+                })
+    </script>
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/hoverable-collapse.js"></script>
+    <script src="../js/misc.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/todolist.js"></script>
+    <script src="../js/ipanda.js"></script>
+    <script src="../js/waktu.js"></script>
+    <script src="../js/visitor.js"></script>
+  </body> 
+
+
+ 
+
+ 
+</html>
